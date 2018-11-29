@@ -76,3 +76,86 @@ else {
   alert('Incorrect. NASA determined that some of your basic houseplants are the best way to clean the air of volatile organic compounds. ' + userName + ', I highly reccomend you check out the list of the 12 best air purifying housplants. It will cheer you up and prepare you for the next bit.');
   console.log('evaluates the return value of' + plantRes);
 }
+
+//question 6, first try
+var manyPlants1=prompt('How many plants do I have? You get 4 guesses.');
+console.log('Returns first user answer as a string');
+
+parseInt(manyPlants1);
+console.log('Turns first user answer string into an integer.');
+
+if (manyPlants1 < 5) {
+alert('That\'s not enough plants for me.');
+}
+else if (manyPlants1 > 5) {
+  alert('That\'s too many plants for me.');
+}
+else {
+  alert('You got it, I have 5 plants. I\'m going to ask you this question 3 more times anyway.');
+}
+//question 6, second try
+var manyPlants2=prompt('How many plants do I have? You get 3 more guesses.');
+console.log('Returns second user answer as a string');
+
+parseInt(manyPlants2);
+console.log('Turns second user answer string into an integer.');
+
+if (manyPlants2 < 5) {
+alert('That\'s not enough plants for me.');
+}
+else if (manyPlants2 > 5) {
+  alert('That\'s too many plants for me.');
+}
+else {
+  alert('You got it, I have 5 plants. I\'m going to ask you this question 2 more times anyway.');
+}
+
+//Question 6, third try
+var manyPlants3=prompt('How many plants do I have? You get 2 more guesses.');
+console.log('Returns third user answer as a string');
+
+parseInt(manyPlants3);
+console.log('Turns third user answer string into an integer.');
+
+if (manyPlants3 < 5) {
+alert('That\'s not enough plants for me.');
+}
+else if (manyPlants3 > 5) {
+  alert('That\'s too many plants for me.');
+}
+else {
+  alert('You got it, I have 5 plants.I\'m going to ask you this question one more time anyway.');
+}
+//Question 6, fourth try
+var manyPlants4=prompt('How many plants do I have? This is the last one.');
+console.log('Returns fourth user answer as a string');
+
+parseInt(manyPlants4);
+console.log('Turns fourth user answer string into an integer.');
+
+if (manyPlants4 < 5) {
+alert('That\'s not enough plants for me. I have 5.');
+}
+else if (manyPlants4 > 5) {
+  alert('That\'s too many plants for me. I have 5');
+}
+else {
+  alert('You got it, I have 5 plants.');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
