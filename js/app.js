@@ -143,6 +143,23 @@ else {
   alert('You got it, I have 5 plants.');
 }
 
+//Question 7
+var plants=['philodendron', 'fern', 'snake plant', 'dracaena'];
+var guess = prompt('Can you guess one type of my houseplants? I have 4 varieties and you get 6 tries.');
+var guessRes = (guess.toLowerCase());
+console.log('ensures user response is all caps');
+
+for(var i = 0; i <plants.length; i++) {
+  if(guessRes === plants[i]) {
+    alert('Right!');
+    break;
+  } else {
+      alert('Try again.');
+    //break;
+  } 
+    }
+  
+      
 
 
 
