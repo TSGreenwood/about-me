@@ -1,6 +1,8 @@
 'use strict';
 
 //Initial username
+
+
 var userName =prompt('Hello, what is your name?');
 console.log;('Gives us ' + userName + 'so we can personalize their experience.');
 
@@ -11,13 +13,20 @@ console.log(purpose + 'returns whether' + userName + 'is here on purpose');
 var purposeRes = (purpose.toUpperCase());
 console.log('ensures user response is all caps');
 
-if(purposeRes === 'YES') {
-  alert('Correct! Welcome to the site, ' + userName);
+// Chris driving: create a function using new parameter names
+// when calling the function, use variables above as arguments for function
+
+function firstQuestion() {
+  if(purposeRes === 'YES') {
+    alert('Correct! Welcome to the site, ' + userName);
+  }
+  else {
+    alert('Incorrect, ' + userName + 'You should have better things to see.');
+    console.log('evaluates the return value of' + purposeRes);
+  }
 }
-else {
-  alert('Incorrect, ' + userName + 'You should have better things to see.');
-  console.log('evaluates the return value of' + purposeRes);
-}
+
+firstQuestion();
 
 //question 2
 var likeSite =prompt('Do you like my website?');
@@ -26,13 +35,18 @@ console.log(likeSite + 'returns whether they are polite enough to say they like 
 var likeSiteRes = (likeSite.toUpperCase());
 console.log('ensures user response is all caps');
 
-if(likeSiteRes === 'YES') {
-  alert('Correct! It is very polite of you to say that.');
+function secondQuestion() {
+  if(likeSiteRes === 'YES') {
+    alert('Correct! It is very polite of you to say that.');
+  }
+  else {
+    alert('Incorrect. Fortunately you can make your own web site.');
+    console.log('evaluates the return value of' + likeSiteRes);
+  }
 }
-else {
-  alert('Incorrect. Fortunately you can make your own web site.');
-  console.log('evaluates the return value of' + likeSiteRes);
-}
+
+secondQuestion();
+
 //question 3
 var cleanAir =prompt('Is the air outdoors more polluted than the air indoors?');
 console.log(cleanAir + 'returns whether' + userName + 'knows about Sick Building Syndrome');
@@ -40,13 +54,17 @@ console.log(cleanAir + 'returns whether' + userName + 'knows about Sick Building
 var cleanAirRes = (cleanAir.toUpperCase());
 console.log('ensures user response is all caps');
 
-if(cleanAirRes === 'NO') {
-  alert('Correct! ' + userName + ', you must already be hip to offgassing and Sick Building Syndrome.');
+function thirdQuestion() {
+  if(cleanAirRes === 'NO') {
+    alert('Correct! ' + userName + ', you must already be hip to offgassing and Sick Building Syndrome.');
+  }
+  else {
+    alert('Incorrect. Due to offgassing from building materials and limited circulation, the air indoors is much more polluted than outdoor air. I hate to break it to you.');
+    console.log('evaluates the return value of' + cleanAirRes);
+  }
 }
-else {
-  alert('Incorrect. Due to offgassing from building materials and limited circulation, the air indoors is much more polluted than outdoor air. I hate to break it to you.');
-  console.log('evaluates the return value of' + cleanAirRes);
-}
+
+thirdQuestion();
 
 //Question 4
 var nasa =prompt('Did NASA do some terrific studies on how to clean the air inside space stations?');
@@ -55,13 +73,18 @@ console.log(nasa + 'returns whether' + userName + 'knows about NASA clean air st
 var nasaRes = (nasa.toUpperCase());
 console.log('ensures user response is all caps');
 
-if(nasaRes === 'YES') {
-  alert('Correct! They needed ways to clean the air circulating inside the space station.');
+function fourthQuestion() {
+  if(nasaRes === 'YES') {
+    alert('Correct! They needed ways to clean the air circulating inside the space station.');
+  }
+  else {
+    alert('Incorrect. NASA did some great studies with some very practical results.');
+    console.log('evaluates the return value of' + nasaRes);
+  }
 }
-else {
-  alert('Incorrect. NASA did some great studies with some very practical results.');
-  console.log('evaluates the return value of' + nasaRes);
-}
+
+fourthQuestion();
+
 //Question 5
 var plant =prompt('Was the solution houseplants?');
 console.log(plant + 'returns whether' + userName + 'knows about even more about the NASA clean air study');
@@ -69,79 +92,103 @@ console.log(plant + 'returns whether' + userName + 'knows about even more about 
 var plantRes = (plant.toUpperCase());
 console.log('ensures user response is all caps');
 
-if(plantRes === 'YES') {
-  alert('Correct! ' + userName + ', are you Bill Wolverton? Because you know something about air remediation. I highly reccomend you check out the list of the 12 best air purifying housplants.');
+
+function fifthQuestion() {
+  if(plantRes === 'YES') {
+    alert('Correct! ' + userName + ', are you Bill Wolverton? Because you know something about air remediation. I highly reccomend you check out the list of the 12 best air purifying housplants.');
+  }
+  else {
+    alert('Incorrect. NASA determined that some of your basic houseplants are the best way to clean the air of volatile organic compounds. ' + userName + ', I highly reccomend you check out the list of the 12 best air purifying housplants. It will cheer you up and prepare you for the next bit.');
+    console.log('evaluates the return value of' + plantRes);
+  }
 }
-else {
-  alert('Incorrect. NASA determined that some of your basic houseplants are the best way to clean the air of volatile organic compounds. ' + userName + ', I highly reccomend you check out the list of the 12 best air purifying housplants. It will cheer you up and prepare you for the next bit.');
-  console.log('evaluates the return value of' + plantRes);
-}
+
+fifthQuestion();
 
 //question 6, first try
 var manyPlants1=prompt('How many plants do I have? You get 4 guesses.');
 console.log('Returns first user answer as a string');
 
-parseInt(manyPlants1);
-console.log('Turns first user answer string into an integer.');
 
-if (manyPlants1 < 5) {
-  alert('That\'s not enough plants for me.');
+function sixthQuestion1() {
+  parseInt(manyPlants1);
+  console.log('Turns first user answer string into an integer.');
+  console.log(userName + ' guessed ' + manyPlants1);
+  if (manyPlants1 < 5) {
+    alert('That\'s not enough plants for me.');
+  }
+  else if (manyPlants1 > 5) {
+    alert('That\'s too many plants for me.');
+  }
+  else {
+    alert('You got it, I have 5 plants. I\'m going to ask you this question 3 more times anyway.');
+  }
 }
-else if (manyPlants1 > 5) {
-  alert('That\'s too many plants for me.');
-}
-else {
-  alert('You got it, I have 5 plants. I\'m going to ask you this question 3 more times anyway.');
-}
+
+sixthQuestion1();
+
 //question 6, second try
 var manyPlants2=prompt('How many plants do I have? You get 3 more guesses.');
 console.log('Returns second user answer as a string');
 
-parseInt(manyPlants2);
-console.log('Turns second user answer string into an integer.');
+function sixthQuestion2() {
+  parseInt(manyPlants2);
+  console.log('Turns second user answer string into an integer.');
 
-if (manyPlants2 < 5) {
-  alert('That\'s not enough plants for me.');
+  if (manyPlants2 < 5) {
+    alert('That\'s not enough plants for me.');
+  }
+  else if (manyPlants2 > 5) {
+    alert('That\'s too many plants for me.');
+  }
+  else {
+    alert('You got it, I have 5 plants. I\'m going to ask you this question 2 more times anyway.');
+  }
 }
-else if (manyPlants2 > 5) {
-  alert('That\'s too many plants for me.');
-}
-else {
-  alert('You got it, I have 5 plants. I\'m going to ask you this question 2 more times anyway.');
-}
+
+sixthQuestion2();
 
 //Question 6, third try
 var manyPlants3=prompt('How many plants do I have? You get 2 more guesses.');
 console.log('Returns third user answer as a string');
 
-parseInt(manyPlants3);
-console.log('Turns third user answer string into an integer.');
+function sixthQuestion3() {
+  parseInt(manyPlants3);
+  console.log('Turns third user answer string into an integer.');
 
-if (manyPlants3 < 5) {
-  alert('That\'s not enough plants for me.');
+  if (manyPlants3 < 5) {
+    alert('That\'s not enough plants for me.');
+  }
+  else if (manyPlants3 > 5) {
+    alert('That\'s too many plants for me.');
+  }
+  else {
+    alert('You got it, I have 5 plants.I\'m going to ask you this question one more time anyway.');
+  }
 }
-else if (manyPlants3 > 5) {
-  alert('That\'s too many plants for me.');
-}
-else {
-  alert('You got it, I have 5 plants.I\'m going to ask you this question one more time anyway.');
-}
+
+sixthQuestion3();
+
 //Question 6, fourth try
 var manyPlants4=prompt('How many plants do I have? This is the last one.');
 console.log('Returns fourth user answer as a string');
 
-parseInt(manyPlants4);
-console.log('Turns fourth user answer string into an integer.');
+function sixthQuestion4() {
+  parseInt(manyPlants4);
+  console.log('Turns fourth user answer string into an integer.');
 
-if (manyPlants4 < 5) {
-  alert('That\'s not enough plants for me. I have 5.');
+  if (manyPlants4 < 5) {
+    alert('That\'s not enough plants for me. I have 5.');
+  }
+  else if (manyPlants4 > 5) {
+    alert('That\'s too many plants for me. I have 5');
+  }
+  else {
+    alert('You got it, I have 5 plants.');
+  }
 }
-else if (manyPlants4 > 5) {
-  alert('That\'s too many plants for me. I have 5');
-}
-else {
-  alert('You got it, I have 5 plants.');
-}
+
+sixthQuestion4();
 
 //Question 7
 var plants=['philodendron', 'fern', 'snake plant', 'dracaena'];
@@ -149,16 +196,19 @@ var guess = prompt('Can you guess one type of my houseplants? I have 4 varieties
 var guessRes = (guess.toLowerCase());
 console.log('ensures user response is all caps');
 
-for(var i = 0; i <plants.length; i++) {
-  if(guessRes === plants[i]) {
-    alert('Right!');
-    break;
-  } else {
-    alert('Try again.');
-    //break;
+function seventhQuestion() {
+  for(var i = 0; i < plants.length; i++) {
+    if(guessRes === plants[i]) {
+      alert('Right!');
+      break;
+    } else {
+      alert('Try again.');
+      //break;
+    }
   }
 }
 
+seventhQuestion();
 
 
 
