@@ -21,7 +21,7 @@ function firstQuestion() {
     alert('Correct! Welcome to the site, ' + userName);
   }
   else {
-    alert('Incorrect, ' + userName + 'You should have better things to see.');
+    alert('Incorrect, ' + userName + ' You should have better things to see.');
     console.log('evaluates the return value of' + purposeRes);
   }
 }
