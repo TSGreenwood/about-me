@@ -197,7 +197,7 @@ var guessRes = (guess.toLowerCase());
 console.log('ensures user response is all caps');
 
 function seventhQuestion() {
-  for(var i = 0; i <plants.length; i++) {
+  for(var i = 0; i < plants.length; i++) {
     if(guessRes === plants[i]) {
       alert('Right!');
       break;
