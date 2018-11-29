@@ -1,8 +1,8 @@
 'use strict';
 
 //Initial username
-var userName =prompt('Hello, what is your name?')
-console.log('Gives us ' + userName + 'so we can personalize their experience.')
+var userName =prompt('Hello, what is your name?');
+console.log;('Gives us ' + userName + 'so we can personalize their experience.');
 
 //question 1
 var purpose =prompt('Are you here on purpose?');
@@ -85,7 +85,7 @@ parseInt(manyPlants1);
 console.log('Turns first user answer string into an integer.');
 
 if (manyPlants1 < 5) {
-alert('That\'s not enough plants for me.');
+  alert('That\'s not enough plants for me.');
 }
 else if (manyPlants1 > 5) {
   alert('That\'s too many plants for me.');
@@ -101,7 +101,7 @@ parseInt(manyPlants2);
 console.log('Turns second user answer string into an integer.');
 
 if (manyPlants2 < 5) {
-alert('That\'s not enough plants for me.');
+  alert('That\'s not enough plants for me.');
 }
 else if (manyPlants2 > 5) {
   alert('That\'s too many plants for me.');
@@ -118,7 +118,7 @@ parseInt(manyPlants3);
 console.log('Turns third user answer string into an integer.');
 
 if (manyPlants3 < 5) {
-alert('That\'s not enough plants for me.');
+  alert('That\'s not enough plants for me.');
 }
 else if (manyPlants3 > 5) {
   alert('That\'s too many plants for me.');
@@ -134,7 +134,7 @@ parseInt(manyPlants4);
 console.log('Turns fourth user answer string into an integer.');
 
 if (manyPlants4 < 5) {
-alert('That\'s not enough plants for me. I have 5.');
+  alert('That\'s not enough plants for me. I have 5.');
 }
 else if (manyPlants4 > 5) {
   alert('That\'s too many plants for me. I have 5');
@@ -154,12 +154,10 @@ for(var i = 0; i <plants.length; i++) {
     alert('Right!');
     break;
   } else {
-      alert('Try again.');
+    alert('Try again.');
     //break;
-  } 
-    }
-  
-      
+  }
+}
 
 
 
