@@ -2,16 +2,16 @@
 
 //Initial username
 
-
-var userName =prompt('Hello, what is your name?');
-console.log;('Gives us ' + userName + 'so we can personalize their experience.');
+var userName = prompt('Hello, what is your name?');
+console.log;('Hello, ' + userName + '.');
+userName;
 
 //question 1
 var purpose =prompt('Are you here on purpose?');
-console.log(purpose + 'returns whether' + userName + 'is here on purpose');
+console.log('Does  ' + userName + ' want to be here?' + purpose);
 
-var purposeRes = (purpose.toUpperCase());
-console.log('ensures user response is all caps');
+var purposeRes = purpose.toUpperCase();
+
 
 // Chris driving: create a function using new parameter names
 // when calling the function, use variables above as arguments for function
@@ -22,7 +22,7 @@ function firstQuestion() {
   }
   else {
     alert('Incorrect, ' + userName + ' You should have better things to see.');
-    console.log('evaluates the return value of' + purposeRes);
+    console.log('Evaluates ' + userName + ''/'s response to first yes/no question');
   }
 }
 
@@ -96,119 +96,125 @@ console.log('ensures user response is all caps');
 function fifthQuestion() {
   if(plantRes === 'YES') {
     alert('Correct! ' + userName + ', are you Bill Wolverton? Because you know something about air remediation. I highly reccomend you check out the list of the 12 best air purifying housplants.');
+    //break;
   }
   else {
     alert('Incorrect. NASA determined that some of your basic houseplants are the best way to clean the air of volatile organic compounds. ' + userName + ', I highly reccomend you check out the list of the 12 best air purifying housplants. It will cheer you up and prepare you for the next bit.');
-    console.log('evaluates the return value of' + plantRes);
+    console.log('evaluates the return value of ' + plantRes);
   }
 }
 
 fifthQuestion();
 
 //question 6, first try
-var manyPlants1=prompt('How many plants do I have? You get 4 guesses.');
-console.log('Returns first user answer as a string');
+var guessCountDown = 4;
+var manyPlants = parsInt( prompt('How many plants do I have? You get ' + guessCountDown + ' guesses.') );
+console.log(userName + ' guessed ' + manyPlants);
+
+//
+
+// function sixthQuestion1() {
+//   //while guessCountDown > 0 {
+//     if (manyPlants === (5)
 
 
-function sixthQuestion1() {
-  parseInt(manyPlants1);
-  console.log('Turns first user answer string into an integer.');
-  console.log(userName + ' guessed ' + manyPlants1);
-  if (manyPlants1 < 5) {
-    alert('That\'s not enough plants for me.');
-  }
-  else if (manyPlants1 > 5) {
-    alert('That\'s too many plants for me.');
-  }
-  else {
-    alert('You got it, I have 5 plants. I\'m going to ask you this question 3 more times anyway.');
-  }
-}
 
-sixthQuestion1();
+//   console.log(userName + ' guessed ' + manyPlants1);
+//   if (manyPlants1 < 5) {
+//     alert('That\'s not enough plants for me.');
+//   }
+//   else if (manyPlants1 > 5) {
+//     alert('That\'s too many plants for me.');
+//   }
+//   else {
+//     alert('You got it, I have 5 plants. I\'m going to ask you this question 3 more times anyway.');
+//   }
+// }
+
+//sixthQuestion1();
 
 //question 6, second try
-var manyPlants2=prompt('How many plants do I have? You get 3 more guesses.');
-console.log('Returns second user answer as a string');
+// var manyPlants2 =prompt('How many plants do I have? You get 3 more guesses.');
+// console.log('Returns second user answer as a string');
 
-function sixthQuestion2() {
-  parseInt(manyPlants2);
-  console.log('Turns second user answer string into an integer.');
+// function sixthQuestion2() {
+//   parseInt(manyPlants2);
+//   console.log('Turns second user answer string into an integer.');
 
-  if (manyPlants2 < 5) {
-    alert('That\'s not enough plants for me.');
-  }
-  else if (manyPlants2 > 5) {
-    alert('That\'s too many plants for me.');
-  }
-  else {
-    alert('You got it, I have 5 plants. I\'m going to ask you this question 2 more times anyway.');
-  }
-}
+//   if (manyPlants2 < 5) {
+//     alert('That\'s not enough plants for me.');
+//   }
+//   else if (manyPlants2 > 5) {
+//     alert('That\'s too many plants for me.');
+//   }
+//   else {
+//     alert('You got it, I have 5 plants. I\'m going to ask you this question 2 more times anyway.');
+//   }
+// }
 
-sixthQuestion2();
+// sixthQuestion2();
 
-//Question 6, third try
-var manyPlants3=prompt('How many plants do I have? You get 2 more guesses.');
-console.log('Returns third user answer as a string');
+// //Question 6, third try
+// var manyPlants3=prompt('How many plants do I have? You get 2 more guesses.');
+// console.log('Returns third user answer as a string');
 
-function sixthQuestion3() {
-  parseInt(manyPlants3);
-  console.log('Turns third user answer string into an integer.');
+// function sixthQuestion3() {
+//   parseInt(manyPlants3);
+//   console.log('Turns third user answer string into an integer.');
 
-  if (manyPlants3 < 5) {
-    alert('That\'s not enough plants for me.');
-  }
-  else if (manyPlants3 > 5) {
-    alert('That\'s too many plants for me.');
-  }
-  else {
-    alert('You got it, I have 5 plants.I\'m going to ask you this question one more time anyway.');
-  }
-}
+//   if (manyPlants3 < 5) {
+//     alert('That\'s not enough plants for me.');
+//   }
+//   else if (manyPlants3 > 5) {
+//     alert('That\'s too many plants for me.');
+//   }
+//   else {
+//     alert('You got it, I have 5 plants.I\'m going to ask you this question one more time anyway.');
+//   }
+// }
 
-sixthQuestion3();
+// sixthQuestion3();
 
-//Question 6, fourth try
-var manyPlants4=prompt('How many plants do I have? This is the last one.');
-console.log('Returns fourth user answer as a string');
+// //Question 6, fourth try
+// var manyPlants4=prompt('How many plants do I have? This is the last one.');
+// console.log('Returns fourth user answer as a string');
 
-function sixthQuestion4() {
-  parseInt(manyPlants4);
-  console.log('Turns fourth user answer string into an integer.');
+// function sixthQuestion4() {
+//   parseInt(manyPlants4);
+//   console.log('Turns fourth user answer string into an integer.');
 
-  if (manyPlants4 < 5) {
-    alert('That\'s not enough plants for me. I have 5.');
-  }
-  else if (manyPlants4 > 5) {
-    alert('That\'s too many plants for me. I have 5');
-  }
-  else {
-    alert('You got it, I have 5 plants.');
-  }
-}
+//   if (manyPlants4 < 5) {
+//     alert('That\'s not enough plants for me. I have 5.');
+//   }
+//   else if (manyPlants4 > 5) {
+//     alert('That\'s too many plants for me. I have 5');
+//   }
+//   else {
+//     alert('You got it, I have 5 plants.');
+//   }
+// }
 
-sixthQuestion4();
+// sixthQuestion4();
 
-//Question 7
-var plants=['philodendron', 'fern', 'snake plant', 'dracaena'];
-var guess = prompt('Can you guess one type of my houseplants? I have 4 varieties and you get 6 tries.');
-var guessRes = (guess.toLowerCase());
-console.log('ensures user response is all caps');
+// //Question 7
+// var plants=['philodendron', 'fern', 'snake plant', 'dracaena'];
+// var guess = prompt('Can you guess one type of my houseplants? I have 4 varieties and you get 6 tries.');
+// var guessRes = (guess.toLowerCase());
+// console.log('ensures user response is all caps');
 
-function seventhQuestion() {
-  for(var i = 0; i < plants.length; i++) {
-    if(guessRes === plants[i]) {
-      alert('Right!');
-      break;
-    } else {
-      alert('Try again.');
-      //break;
-    }
-  }
-}
+// function seventhQuestion() {
+//   for(var i = 0; i < plants.length; i++) {
+//     if(guessRes === plants[i]) {
+//       alert('Right!');
+//       break;
+//     } else {
+//       alert('Try again.');
+//       //break;
+//     }
+//   }
+// }
 
-seventhQuestion();
+// seventhQuestion();
 
 
 
